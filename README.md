@@ -14,6 +14,8 @@ In this folder, a PD controller is added to control the plant and drive it to a 
 
 ### 3. Model Simulation + State Feedback LQR Control:
 In this folder, another control method is used to achieve the same control goal.
+## System Parameters
+Within the SimulateModel.m file, all the model parameters could be adjusted, such as the motor mass m1, link mass m2, spring elasticity K, sytem initial conditions, and zeta, which value is then used to compute the damping coefficients b1 and b2. In addition, for the models with the control part, an additional parameter x_ref can be adjusted to set the goal position (setpoint) for the controller. Finally, also for the models with control, the control parameters could be tuned: Kp and Kd for PD controller, and values for Q and R to tune the LQR controller.
 
 ## Execution Guidelines
 Each folder has 3 files: StatisticsFcn, SimulateModel, and the Simulink file: TaskSolution.
@@ -26,3 +28,9 @@ This is the main file that defines system parameters for Simulink model, simulat
 
 ### 3. TaskSolution.slx:
 This is the Simulink file containing the model. The system parameters are defines as variables so that it can be simulated using the SimulateModel.m file only. 
+
+## How to Run the Program?
+ 1. Open the folder with the model of choice: model with no control, model with PD Controller, or model with State Feedback & LQR.
+ 2. Launch the corresponding Simulink model and the MATLAB script SimulateModel.m
+ 3. Adjust the model parameters in SimulateModel.m and run the script to view the results.
+ 4. The results are automoatically printed: response plots for x1 & x2 and statistics of response in MATLAB terminal.
