@@ -3,6 +3,7 @@ In this project, a two-mass, one-spring system is modeled and simulated in MATLA
 1. PD Controller
 2. State Feedback Control with LQR
 
+Moreover, the detailed modeling steps, equations derivation, and results analysis are available in the pdf file: "Task Report".
 ## Project Files
 ### 1. Model Simulation with no Control:
 The project files in this folder model the plant response with no control as a response to an initial perturbation in the initial motor's position, where the response is naturally-damped due to both motor's and link's viscosities.
